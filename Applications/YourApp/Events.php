@@ -86,7 +86,7 @@ class Events
                 ];
                 $redis = new \Redis;
                 $redis->connect('127.0.0.1',6379);
-                $key = "ROOM:".$roomId;
+                $key = "PV:ROOM:".$roomId;
                 $field = "ROOM_TOTAL_PV";
                 // 进入房间的人数增长，自增 ，增加PV统计
                 $redis->hIncrBy($key,$field,1);
