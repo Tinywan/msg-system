@@ -77,6 +77,10 @@ class Events
             case 'join':  // 用户进入直播间
                 //将客户端加入到某一直播间
                 Gateway::joinGroup($client_id, $roomId);
+
+                // 设置session，关闭时统计活动ID
+                $_SESSION['roomId'] = $roomId;    
+                $_SESSION['userName'] = $userName;                      
                 $resData = [
                     'type' => 'join',
                     'roomId' => $roomId,
@@ -131,7 +135,16 @@ class Events
      */
     public static function onClose($client_id)
     {
-       // 向所有人发送 
-        GateWay::sendToAll("$client_id logout\r\n");
+        $resData = [
+            'type' => 'logout',
+            'client_id' => $client_id,
+            'userName' => $_SESSION['userName'],
+            'msg' => $_SESSION['userName'].' is logout' // 初始化房间信息
+        ];
+        if (isset($_SESSION['roomId'])) {
+            Gateway::sendToGroup($_SESSION['roomId'], json_encode($resData));
+        }else{
+            GateWay::sendToAll("$client_id logout\r\n");
+        }
     }
 }
