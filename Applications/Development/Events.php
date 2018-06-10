@@ -36,6 +36,16 @@ use \GatewayWorker\Lib\Gateway;
  */
 class Events
 {
+    const MSG_TYPE = ['join', 'say', 'like', 'pong'];
+
+    /**
+     * Worker进程开启时触发
+     */
+    public static function onWorkerStart()
+    {
+        global $global;
+    }
+
     /**
      * 当客户端连接时触发
      * 如果业务不需此回调可以删除onConnect
@@ -65,6 +75,10 @@ class Events
         // 解析数据
         $resData = json_decode($message, true);
         $type = $resData['type'];
+        // 非消息类型为非法请求，关闭连接
+        if(!in_array($type,self::MSG_TYPE)) {
+            return Gateway::closeClient($client_id);
+        }
         $roomId = $resData['roomId'];
         $userId = $resData['userId']; // 未登录，则传递一个随机
         $userName = $resData['userName']; // 未登录，则传递一个随机
@@ -78,8 +92,13 @@ class Events
                 //将客户端加入到某一直播间
                 Gateway::joinGroup($client_id, $roomId);
 
+                // 如果没有$_SESSION['userId']说明客户端没有加入
+                if(!isset($_SESSION['userId'])) {
+                    // 设置session，标记该客户端已经登录
+                    $_SESSION['userId'] = $resData['userId'];
+                }
                 // 设置session，关闭时统计活动ID
-                $_SESSION['roomId'] = $roomId;    
+                $_SESSION['roomId'] = $roomId;
                 $_SESSION['userName'] = $userName;                      
                 $resData = [
                     'type' => 'join',
@@ -92,7 +111,7 @@ class Events
                 $redis->connect('127.0.0.1',6379);
                 $key = "PV:ROOM:".$roomId;
                 $field = "ROOM_TOTAL_PV";
-                // 进入房间的人数增长，自增 ，增加PV统计
+                //进入房间的人数增长，自增 ，增加PV统计
                 $redis->hIncrBy($key,$field,1);
 
                 // 广播给直播间内所有人，谁？什么时候？加入了那个房间？

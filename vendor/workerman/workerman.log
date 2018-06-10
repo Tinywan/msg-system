@@ -531,3 +531,837 @@ Stack trace:
 #11 D:\phpStudy\PHPTutorial\WWW\GatewayWorker\Applications\YourApp\start_businessworker.php(35): Workerman\Worker::runAll()
 #12 {main}
 2018-06-10 02:32:52 pid:1 Worker process terminated
+2018-06-10 15:55:32 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:55:32 pid:1 Worker process terminated
+2018-06-10 15:55:35 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:122
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"say","...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:55:35 pid:1 Worker process terminated
+2018-06-10 15:55:38 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:122
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"say","...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:55:38 pid:1 Worker process terminated
+2018-06-10 15:55:46 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:122
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"say","...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:55:46 pid:1 Worker process terminated
+2018-06-10 15:56:34 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:56:34 pid:1 Worker process terminated
+2018-06-10 15:56:46 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:56:46 pid:1 Worker process terminated
+2018-06-10 15:56:50 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:122
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"say","...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:56:50 pid:1 Worker process terminated
+2018-06-10 15:56:51 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:122
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"say","...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:56:51 pid:1 Worker process terminated
+2018-06-10 15:56:52 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://wiki.workerman.net/Error3
+2018-06-10 15:56:52 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://wiki.workerman.net/Error3
+2018-06-10 15:56:52 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:56:52 pid:1 Worker process terminated
+2018-06-10 15:57:32 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:57:32 pid:1 Worker process terminated
+2018-06-10 15:57:35 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:57:35 pid:1 Worker process terminated
+2018-06-10 15:57:37 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:122
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"say","...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:57:37 pid:1 Worker process terminated
+2018-06-10 15:57:44 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:57:44 pid:1 Worker process terminated
+2018-06-10 15:57:46 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:57:46 pid:1 Worker process terminated
+2018-06-10 15:57:48 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:57:48 pid:1 Worker process terminated
+2018-06-10 15:57:53 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 15:57:53 pid:1 Worker process terminated
+2018-06-10 16:01:58 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:01:59 pid:1 Worker process terminated
+2018-06-10 16:02:04 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:02:04 pid:1 Worker process terminated
+2018-06-10 16:04:38 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:04:38 pid:1 Worker process terminated
+2018-06-10 16:04:45 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:04:45 pid:1 Worker process terminated
+2018-06-10 16:04:50 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:04:50 pid:1 Worker process terminated
+2018-06-10 16:05:04 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:05:04 pid:1 Worker process terminated
+2018-06-10 16:05:17 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:05:17 pid:1 Worker process terminated
+2018-06-10 16:05:20 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:05:20 pid:1 Worker process terminated
+2018-06-10 16:05:40 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:103
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:05:40 pid:1 Worker process terminated
+2018-06-10 16:06:16 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:102
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:06:16 pid:1 Worker process terminated
+2018-06-10 16:06:19 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:102
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:06:19 pid:1 Worker process terminated
+2018-06-10 16:07:23 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:102
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:07:23 pid:1 Worker process terminated
+2018-06-10 16:07:24 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:102
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:07:24 pid:1 Worker process terminated
+2018-06-10 16:07:28 pid:1 Error: Class 'Applications\Development\BaseRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:102
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:07:28 pid:1 Worker process terminated
+2018-06-10 16:09:16 pid:1 Error: Class 'Applications\Development\RedisHandler' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:09:16 pid:1 Worker process terminated
+2018-06-10 16:09:28 pid:1 Error: Class 'Applications\Development\RedisHandler' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:09:28 pid:1 Worker process terminated
+2018-06-10 16:10:36 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:10:36 pid:1 Worker process terminated
+2018-06-10 16:10:39 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:10:39 pid:1 Worker process terminated
+2018-06-10 16:10:47 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:10:47 pid:1 Worker process terminated
+2018-06-10 16:10:56 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:10:56 pid:1 Worker process terminated
+2018-06-10 16:10:59 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:10:59 pid:1 Worker process terminated
+2018-06-10 16:11:01 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:11:01 pid:1 Worker process terminated
+2018-06-10 16:11:09 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:11:09 pid:1 Worker process terminated
+2018-06-10 16:11:10 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:11:10 pid:1 Worker process terminated
+2018-06-10 16:13:09 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:13:09 pid:1 Worker process terminated
+2018-06-10 16:13:10 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:13:10 pid:1 Worker process terminated
+2018-06-10 16:13:14 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:13:14 pid:1 Worker process terminated
+2018-06-10 16:13:32 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:13:33 pid:1 Worker process terminated
+2018-06-10 16:14:03 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:14:03 pid:1 Worker process terminated
+2018-06-10 16:14:05 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:14:05 pid:1 Worker process terminated
+2018-06-10 16:14:12 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:14:12 pid:1 Worker process terminated
+2018-06-10 16:14:24 pid:1 Error: Class 'Applications\Development\MsgRedis' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:14:24 pid:1 Worker process terminated
+2018-06-10 16:16:46 pid:1 Error: Class 'Applications\Development\RedisHandler' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:16:46 pid:1 Worker process terminated
+2018-06-10 16:16:47 pid:1 Error: Class 'Applications\Development\RedisHandler' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:16:47 pid:1 Worker process terminated
+2018-06-10 16:17:22 pid:1 Error: Class 'Applications\Development\RedisHandler' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:17:22 pid:1 Worker process terminated
+2018-06-10 16:17:29 pid:1 Error: Class 'Applications\Development\RedisHandler' not found in D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\Events.php:110
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"join",...')
+#1 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"join",...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#5 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#6 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#7 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\phpStudy\PHPTutorial\WWW\msg-system\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\phpStudy\PHPTutorial\WWW\msg-system\Applications\Development\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-10 16:17:29 pid:1 Worker process terminated
