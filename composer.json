@@ -5,5 +5,11 @@
     "license" : "MIT",
     "require": {
         "workerman/gateway-worker" : ">=3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "library\\": "library",
+            "config\\": "config"
+        }
     }
 }

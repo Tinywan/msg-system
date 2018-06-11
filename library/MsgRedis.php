@@ -11,7 +11,7 @@
  * '-------------------------------------------------------------------*/
 
 
-namespace Applications\Development;
+namespace library;
 
 class MsgRedis
 {
@@ -21,7 +21,7 @@ class MsgRedis
      */
     public static function instance()
     {
-        return RedisHandler::location();
+        return BaseRedis::message();
     }
 
     /**

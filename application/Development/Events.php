@@ -21,6 +21,7 @@
 //declare(ticks=1);
 
 use \GatewayWorker\Lib\Gateway;
+use \library\BaseRedis;
 
 /**
  * 字典说明
@@ -107,8 +108,7 @@ class Events
                     'msg' => "enters the Room", // 发送给客户端的消息，而不是聊天发送的内容
                     'joinTime' => $serverTime // 加入时间                    
                 ];
-                $redis = new \Redis;
-                $redis->connect('127.0.0.1',6379);
+                $redis = BaseRedis::location();
                 $key = "PV:ROOM:".$roomId;
                 $field = "ROOM_TOTAL_PV";
                 //进入房间的人数增长，自增 ，增加PV统计
@@ -127,8 +127,7 @@ class Events
                 ];
 
                 // 将所有评论存储到redis中
-                $redis = new \Redis;
-                $redis->connect('127.0.0.1',6379);
+                $redis = BaseRedis::location();
                 $commentsKey = "COMMENTS:TOATAL:".$roomId;
                 $redis->rPush($commentsKey, json_encode($resData));//往右插，往数据库写入是从左往右顺序执行的
 
