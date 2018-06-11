@@ -33,7 +33,7 @@ class Events
      */
     public static function onWorkerStart()
     {
-        echo "Start WorkerStart\n";
+        echo "WorkerStart\n";
     }
 
     /**
@@ -124,20 +124,6 @@ class Events
                 MsgRedis::saveLatestComments($roomId,$resData);
                 // 广播给直播间内所有人
                 Gateway::sendToGroup($roomId, json_encode($resData));
-                break;
-            case 'like':
-                //点赞人数增长
-                MsgRedis::increaseTotalLikeNum($roomId);
-                $arr = array(
-                  'type' => 'num',
-                  'userName' => $userName,
-                  'message' => '用户点赞成功',
-                  'totalViewNum' => MsgRedis::getPv($roomId),
-                  'totalLikeNum' => MsgRedis::getCommentsLikeNum($roomId) + MsgRedis::getTotalLikeNumByCheat($roomId),
-                  'currentNum' => Gateway::getClientCountByGroup($roomId)
-                );
-                //给群组内的所有人广播
-                Gateway::sendToGroup($roomId, json_encode($arr));
                 break;
             case 'pong':
                 break; // 接收心跳

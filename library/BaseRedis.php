@@ -9,9 +9,9 @@
  * |  Desc: 描述信息
  * '------------------------------------------------------------------------------------------------------------------*/
 
-namespace library;
+namespace Library;
 
-use config\RedisConfig;
+use Config\RedisConfig;
 
 class BaseRedis
 {

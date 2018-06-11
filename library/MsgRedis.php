@@ -1,15 +1,15 @@
 <?php
-/** .-------------------------------------------------------------------
+/**.-------------------------------------------------------------------------------------------------------------------
  * |  Github: https://github.com/Tinywan
  * |  Blog: http://www.cnblogs.com/Tinywan
- * |-------------------------------------------------------------------
+ * |--------------------------------------------------------------------------------------------------------------------
  * |  Author: Tinywan(ShaoBo Wan)
- * |  DateTime: 2017/8/26 22:01
+ * |  DateTime: 2018/6/10 6:52
  * |  Mail: Overcome.wan@Gmail.com
- * |  Function: 统计消息服务器信息
- * '-------------------------------------------------------------------*/
+ * |  Desc: 统计消息服务器信息
+ * '------------------------------------------------------------------------------------------------------------------*/
 
-namespace library;
+namespace Library;
 
 class MsgRedis
 {
@@ -23,6 +23,9 @@ class MsgRedis
         return BaseRedis::location();
     }
 
+    /**.----------------------------------------------------------------------------------------------------------------
+     * |--------------------消息统计
+     * '----------------------------------------------------------------------------------------------------------------
     /**
      * 直播间PV统计
      * @param $roomId
@@ -32,6 +35,18 @@ class MsgRedis
         $key = "PV:ROOM:".$roomId;
         $field = "ROOM_TOTAL_PV";
         self::instance()->hIncrBy($key,$field,1);
+    }
+
+    /**
+     * 直播间PV
+     * @param $roomId
+     * @return int
+     */
+    public static function getPv($roomId)
+    {
+        $key = "PV:ROOM:".$roomId;
+        $field = "ROOM_TOTAL_PV";
+        return intval(self::instance()->hGet($key, $field));
     }
 
     /**
@@ -64,8 +79,8 @@ class MsgRedis
      */
     public static function increaseTotalCommentsNum($roomId)
     {
-        $key = $roomId . "Num";
-        $field = "TotalCommentsNum";
+        $key = "COMMENTS:NUMS:".$roomId;
+        $field = "COMMENTS_TOTAL_NUM";
         self::instance()->hIncrBy($key, $field, 1);
     }
 
@@ -84,7 +99,7 @@ class MsgRedis
 
     /**
      * 取出最新的活动评论信息
-     * @param $liveId
+     * @param $roomId
      * @param $num
      * @return array
      */
@@ -92,6 +107,110 @@ class MsgRedis
     {
         $latestCommentsKey = "COMMENTS:LATEST:".$roomId;
         return self::instance()->lRange($latestCommentsKey, 0, $num - 1);
+    }
+
+    /**
+     * 添加活动点赞的数量
+     * @param $roomId
+     * @return bool|int|string
+     */
+    public static function increaseTotalLikeNum($roomId)
+    {
+        $key = "COMMENTS:LIKE:".$roomId;
+        $field = "COMMENTS_LIKE_TOTAL";
+        return self::instance()->hIncrBy($key, $field, 1);
+    }
+
+    /**
+     * 得到活动点赞的数量
+     * @param $roomId
+     * @return bool|int|string
+     */
+    public static function getCommentsLikeNum($roomId)
+    {
+        $key = "COMMENTS:LIKE:".$roomId;
+        $field = "COMMENTS_LIKE_TOTAL";
+        return intval(self::instance()->hGet($key, $field));
+    }
+
+    /**
+     * 得到活动点赞的作弊数量
+     * @param $roomId
+     * @return int
+     */
+    public static function getTotalLikeNumByCheat($roomId)
+    {
+        $key = $roomId . "Num";
+        $field = "TotalLikeNumByCheat";
+        self::setUpdateStatus($key);
+        return intval(self::instance()->hGet($key, $field));
+    }
+
+    /**
+     * 设置数据的更新情况
+     * @param $key
+     * @return int
+     */
+    public static function setUpdateStatus($key)
+    {
+        $field = "IsUpdate";
+        self::instance()->hSet($key, $field, 1);
+    }
+
+
+    /**
+     * 设置用户过滤器，0无名单，1白名单，-1黑名单
+     * @param $roomId
+     * @return int
+     */
+    public static function getUserFilter($roomId)
+    {
+        $key = $roomId . "Num";
+        $field = "UserFilter";
+        return intval(self::instance()->hGet($key, $field));
+    }
+
+    /**
+     * 返回黑名单列表
+     * @param $roomId
+     * @return array|mixed
+     */
+    public static function getBlackList($roomId)
+    {
+        $key = "LIST:BLACK:".$roomId;
+        $field = "BLACK_LIST";
+        if (self::instance()->hExists($key, $field)) {
+            return json_decode(self::instance()->hGet($key, $field), true);
+        } else {
+            return array();
+        }
+    }
+
+    /**
+     * 返回白名单列表
+     * @param $roomId
+     * @return array|mixed
+     */
+    public static function getWhiteList($roomId)
+    {
+        $key = "LIST:WHITE:".$roomId;
+        $field = "WHITE_LIST";
+        if (self::instance()->hExists($key, $field)) {
+            return json_decode(self::instance()->hGet($key, $field), true);
+        } else {
+            return array();
+        }
+    }
+
+    /**
+     * 判断域名是否合法
+     * @param $domain
+     * @return bool
+     */
+    public static function inLegalDomains($domain)
+    {
+        $key = "DOMAINS";
+        return self::instance()->hExists($key, $domain);
     }
 
 }

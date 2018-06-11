@@ -1,15 +1,22 @@
 {
     "name"  : "workerman/gateway-worker-demo",
     "keywords": ["distributed","communication"],
-    "homepage": "http://www.workerman.net",
-    "license" : "MIT",
+    "license": "MIT",
+    "keywords": ["machine learning","pattern recognition","neural network","computational learning theory","artificial intelligence","data science","feature extraction"],
+    "homepage": "https://www.tinywan.com/",
+    "authors": [
+        {
+            "name": "Tinywan",
+            "email": "Overcome.wan@gmail.com"
+        }
+    ],
     "require": {
         "workerman/gateway-worker" : ">=3.0.0"
     },
     "autoload": {
         "psr-4": {
-            "library\\": "library",
-            "config\\": "config"
+            "Library\\": "library",
+            "Config\\": "config"
         }
     }
 }
