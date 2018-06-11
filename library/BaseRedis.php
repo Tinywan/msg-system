@@ -85,9 +85,9 @@ class BaseRedis
     {
         try {
             $_connectSource = self::instance()
-                ->connect(RedisConfig::$location['host'], RedisConfig::$message['host']);
+                ->connect(RedisConfig::$message['host'], RedisConfig::$message['port']);
             if (RedisConfig::$message['password'] != '') {
-                self::instance()->auth(RedisConfig::$message['auth']);
+                self::instance()->auth(RedisConfig::$message['password']);
             }
             if ($_connectSource === FALSE) return FALSE;
             return static::$_instance;
@@ -97,7 +97,7 @@ class BaseRedis
     }
 
     /**
-     *  Location Instance  实例
+     *  Location 实例
      * @return \Redis
      * @static
      */
