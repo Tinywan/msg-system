@@ -7,9 +7,7 @@
  * |  DateTime: 2017/8/26 22:01
  * |  Mail: Overcome.wan@Gmail.com
  * |  Function: 统计消息服务器信息
- * |  Created by PhpStorm
  * '-------------------------------------------------------------------*/
-
 
 namespace library;
 
@@ -21,109 +19,79 @@ class MsgRedis
      */
     public static function instance()
     {
-        return BaseRedis::message();
+        //return BaseRedis::message();
+        return BaseRedis::location();
     }
 
     /**
-     * ------------------------------------以下是某活动评论的存储与统计---------------------------------------------------
+     * 直播间PV统计
+     * @param $roomId
+     */
+    public static function Pv($roomId)
+    {
+        $key = "PV:ROOM:".$roomId;
+        $field = "ROOM_TOTAL_PV";
+        self::instance()->hIncrBy($key,$field,1);
+    }
+
+    /**
+     * 直播间UV统计
+     * @param $roomId
+     */
+    public static function Uv($roomId)
+    {
+        $key = "UV:ROOM:".$roomId;
+        $field = "ROOM_TOTAL_UV";
+        self::instance()->hIncrBy($key,$field,1);
+    }
+
+    /**
      * 存储活动的评论信息，全部
-     * @param $liveId
+     * @param $roomId
      * @param $comment
      */
-    public static function saveAllComments($liveId, $comment)
+    public static function saveAllComments($roomId, $comment)
     {
-        $key = $liveId . "Comments";
+        $commentsKey = "COMMENTS:TOATAL:".$roomId;
         //往右插，往数据库写入是从左往右顺序执行的
-        self::instance()->rPush($key, $comment);
-        //评论数量自增
-        self::increaseTotalCommentsNum($liveId);
+        self::instance()->rPush($commentsKey, json_encode($comment));
     }
 
     /**
      * 增加评论的数量
-     * @param $liveId
+     * @param $roomId
      * @return bool|int|string
      */
-    public static function increaseTotalCommentsNum($liveId)
+    public static function increaseTotalCommentsNum($roomId)
     {
-        $key = $liveId . "Num";
+        $key = $roomId . "Num";
         $field = "TotalCommentsNum";
-        return self::redisInstance()->hIncrBy($key, $field, 1);
+        self::instance()->hIncrBy($key, $field, 1);
     }
 
     /**
      * 存储活动评论信息，最新的几条
-     * @param $liveId
+     * @param $roomId
      * @param $comment
      */
-    public static function saveLateComments($liveId, $comment)
+    public static function saveLatestComments($roomId, $comment)
     {
-        $key = $liveId . "CommentsLate";
-        self::redisInstance()->lPush($key, $comment);  //往左插，取出时从左面开始取
-        self::redisInstance()->lTrim($key, 0, 100);
-    }
-
-    //=========================以下是某活动打开网页人数的统计=========================
-
-    /**
-     * 添加打开直播页面的客户端数量（累计打开页面人数）
-     * @param $liveId
-     * @return bool|int|string
-     */
-    public static function increaseTotalViewNum($liveId)
-    {
-        $key = $liveId . "Num";
-        $field = "TotalViewNum";
-        return self::redisInstance()->hIncrBy($key, $field, 1);
+        $latestCommentsKey = "COMMENTS:LATEST:".$roomId;
+        //往左插，取出时从左面开始取
+        self::instance()->lPush($latestCommentsKey, json_encode($comment));
+        self::instance()->lTrim($latestCommentsKey, 0, 9);
     }
 
     /**
-     * 得到打开直播页面的客户端的数量（累计打开页面人数）
-     * @param $liveId
-     * @return bool|int|string
-     */
-    public static function getTotalViewNum($liveId)
-    {
-        $key = $liveId . "Num";
-        $field = "TotalViewNum";
-        return intval(self::redisInstance()->hGet($key, $field));
-    }
-
-    /**
-     * 得到打开直播页面的客户端的作弊数量（累计打开页面人数的作弊数量）
-     * @param $liveId
-     * @return bool|int|string
-     */
-    public static function getTotalViewNumByCheat($liveId)
-    {
-        $key = $liveId . "Num";
-        $field = "TotalViewNumByCheat";
-        return intval(self::redisInstance()->hGet($key, $field));
-    }
-
-    /**
-     * 设置某活动最高同时打开直播页面的人数
+     * 取出最新的活动评论信息
      * @param $liveId
      * @param $num
-     * @return bool|int|string
+     * @return array
      */
-    public static function setMaxOnlineViewNum($liveId, $num)
+    public static function getLatestComments($roomId, $num)
     {
-        $key = $liveId . "Num";
-        $field = "MaxOnlineViewNum";
-        return self::redisInstance()->hSet($key, $field, $num);
-    }
-
-    /**
-     * 得到某活动最高同时打开直播页面的人数
-     * @param $liveId
-     * @return bool|int|string
-     */
-    public static function getMaxOnlineViewNum($liveId)
-    {
-        $key = $liveId . "Num";
-        $field = "MaxOnlineViewNum";
-        return intval(self::redisInstance()->hGet($key, $field));
+        $latestCommentsKey = "COMMENTS:LATEST:".$roomId;
+        return self::instance()->lRange($latestCommentsKey, 0, $num - 1);
     }
 
 }

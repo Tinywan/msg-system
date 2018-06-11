@@ -21,7 +21,7 @@
 //declare(ticks=1);
 
 use \GatewayWorker\Lib\Gateway;
-use \library\BaseRedis;
+use \library\MsgRedis;
 
 /**
  * 字典说明
@@ -44,7 +44,7 @@ class Events
      */
     public static function onWorkerStart()
     {
-        global $global;
+        echo "WorkerStart\n";
     }
 
     /**
@@ -82,7 +82,7 @@ class Events
         }
         $roomId = $resData['roomId'];
         $userId = $resData['userId']; // 未登录，则传递一个随机
-        $userName = $resData['userName']; // 未登录，则传递一个随机
+        $userName = $resData['userName'].rand(1111,9999); // 未登录，则传递一个随机
         $content = isset($resData['content']) ? $resData['content'] : 'default content';
         
         //将时间全部置为服务器时间
@@ -101,20 +101,23 @@ class Events
                 // 设置session，关闭时统计活动ID
                 $_SESSION['roomId'] = $roomId;
                 $_SESSION['userName'] = $userName;                      
-                $resData = [
-                    'type' => 'join',
-                    'roomId' => $roomId,
-                    'userName' => $userName,
-                    'msg' => "enters the Room", // 发送给客户端的消息，而不是聊天发送的内容
-                    'joinTime' => $serverTime // 加入时间                    
-                ];
-                $redis = BaseRedis::location();
-                $key = "PV:ROOM:".$roomId;
-                $field = "ROOM_TOTAL_PV";
-                //进入房间的人数增长，自增 ，增加PV统计
-                $redis->hIncrBy($key,$field,1);
 
-                // 广播给直播间内所有人，谁？什么时候？加入了那个房间？
+                // PV 统计
+                MsgRedis::Pv($roomId);
+
+                //得到评论的数据
+                $latestComments = MsgRedis::getLatestComments($roomId, 5);
+                //向当前用户自己广播数据 广播给直播间内所有人，谁？什么时候？加入了那个房间？
+                $resData = array(
+                    'type' => 'join',
+                    'userName' => $userName,
+                    'message' => '用户加入直播间',
+                    'totalViewNum' => 12,
+                    'totalLikeNum' => 22,
+                    'joinTime' => $serverTime,
+                    'commentList' => array_reverse($latestComments), //倒序一下，把最新的放到最后（也就是页面的最下面）
+                    'currentNum' => Gateway::getClientCountByGroup($roomId)
+                );
                 Gateway::sendToGroup($roomId, json_encode($resData));
                 break;
             case 'say':  // 用户发表评论
@@ -127,15 +130,9 @@ class Events
                 ];
 
                 // 将所有评论存储到redis中
-                $redis = BaseRedis::location();
-                $commentsKey = "COMMENTS:TOATAL:".$roomId;
-                $redis->rPush($commentsKey, json_encode($resData));//往右插，往数据库写入是从左往右顺序执行的
-
+                MsgRedis::saveAllComments($roomId,$resData);
                 // 存储活动评论信息，最新的几条
-                $latestCommentsKey = "COMMENTS:LATEST:".$roomId;
-                $redis->lPush($latestCommentsKey, json_encode($resData));  //往左插，取出时从左面开始取
-                $redis->lTrim($latestCommentsKey, 0, 10);
-
+                MsgRedis::saveLatestComments($roomId,$resData);
                 // 广播给直播间内所有人
                 Gateway::sendToGroup($roomId, json_encode($resData));
                 break;
@@ -157,6 +154,7 @@ class Events
             'type' => 'logout',
             'client_id' => $client_id,
             'userName' => $_SESSION['userName'],
+            'outTime' => date('Y-m-d H:i:s', time()),
             'msg' => $_SESSION['userName'].' is logout' // 初始化房间信息
         ];
         if (isset($_SESSION['roomId'])) {

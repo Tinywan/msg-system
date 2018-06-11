@@ -11,6 +11,7 @@
 
 namespace library;
 
+use config\RedisConfig;
 
 class BaseRedis
 {
@@ -63,7 +64,6 @@ class BaseRedis
      */
     private function __clone()
     {
-        // TODO: Implement __clone() method.
         trigger_error('Clone is not allow', E_USER_ERROR);
     }
 
@@ -84,9 +84,10 @@ class BaseRedis
     public static function message()
     {
         try {
-            $_connectSource = self::instance()->connect(config('redis.message')['host'], config('redis.message')['port']);
-            if (config('redis.message')['auth']) {
-                self::instance()->auth(config('redis.message')['auth']);
+            $_connectSource = self::instance()
+                ->connect(RedisConfig::$location['host'], RedisConfig::$message['host']);
+            if (RedisConfig::$message['password'] != '') {
+                self::instance()->auth(RedisConfig::$message['auth']);
             }
             if ($_connectSource === FALSE) return FALSE;
             return static::$_instance;
@@ -96,14 +97,15 @@ class BaseRedis
     }
 
     /**
-     *  LocationInstance  实例
+     *  Location Instance  实例
      * @return \Redis
      * @static
      */
     public static function location()
     {
         try {
-            $_connectSource = self::instance()->connect('127.0.0.1', '6379');
+            $_connectSource = self::instance()
+                ->connect(RedisConfig::$location['host'],RedisConfig::$location['port']);
             if ($_connectSource === FALSE) return FALSE;
             return static::$_instance;
         } catch (\Exception $e) {

@@ -4,8 +4,13 @@
 git clone https://github.com/Tinywan/msg-system.git
 ```
 
-## update dependencies
+## update 
 
 ```php
 composer install
 ```
+
+## config
+
+* Redis 
+* Db 
