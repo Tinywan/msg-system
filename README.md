@@ -12,13 +12,13 @@ composer install
 
 # config
 
-## Redis  
+#### Redis  
 
 ```php
 config/RedisConfig.php
 ```  
 
-## MySQL 
+#### MySQL 
 
 ```php
 config/DbConfig.php
@@ -26,13 +26,13 @@ config/DbConfig.php
 
 # run  
 
-## Linux
+#### Linux
 
 ```php
 php start.php start
 ```
 
-## Windows 
+#### Windows 
 
 ```php
 start_for_win.bat

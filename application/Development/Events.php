@@ -1,24 +1,13 @@
 <?php
-
-/**
- * This file is part of workerman.
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the MIT-LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @author walkor<walkor@workerman.net>
- * @copyright walkor<walkor@workerman.net>
- * @link http://www.workerman.net/
- * @license http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-/**
- * 用于检测业务代码死循环或者长时间阻塞等问题
- * 如果发现业务卡死，可以将下面declare打开（去掉//注释），并执行php start.php reload
- * 然后观察一段时间workerman.log看是否有process_timeout异常
- */
-//declare(ticks=1);
+/**.-------------------------------------------------------------------------------------------------------------------
+ * |  Github: https://github.com/Tinywan
+ * |  Blog: http://www.cnblogs.com/Tinywan
+ * |--------------------------------------------------------------------------------------------------------------------
+ * |  Author: Tinywan(ShaoBo Wan)
+ * |  DateTime: 2018/6/11 15:21
+ * |  Mail: Overcome.wan@Gmail.com
+ * |  Desc: 业务逻辑层
+ * '------------------------------------------------------------------------------------------------------------------*/
 
 use \GatewayWorker\Lib\Gateway;
 use \library\MsgRedis;
@@ -32,7 +21,7 @@ use \library\MsgRedis;
  * commentTime: 评论时间
  * content: 评论内容
  * roomId：直播间id
- * userId: 直播间id
+ * userId: 用户id
  * userName: 用户名称
  */
 class Events
