@@ -38,11 +38,11 @@ php start.php start
 start_for_win.bat
 ```
 
-# 数据字典  
+# Data Dictionary  
 
-#### 连接类型   
+#### connect type   
 
-|  字段   |  描述   |
+|  field   |  desc   |
 | :---: | :---: |
 | init  |  初始化  |
 | json  | 加入直播间 |
@@ -50,9 +50,9 @@ start_for_win.bat
 | like  |  点赞   |
 | close |  退出   |
 
-#### 消息字段   
+#### msg field   
 
-|  字段   |  描述   |
+|  fields   |  desc   |
 | :---: | :---: |
 | client_id  |  客户端连接唯一id  |
 | msg  | 消息 |
@@ -62,3 +62,9 @@ start_for_win.bat
 | roomId |  直播间id   |
 | userId |  用户id   |
 | userName |  用户昵称   |
+
+## Problem 
+
+* 提示错误`start_businessworker.php terminated and try to restart`
+  * 请查看Redis是否配置合适
+  * 如果`composer.json`修改过，使用`composer dump-autoload`命令则重新自动生成autoload的文件

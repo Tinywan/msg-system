@@ -2,7 +2,6 @@
     "name"  : "workerman/gateway-worker-demo",
     "keywords": ["distributed","communication"],
     "license": "MIT",
-    "keywords": ["machine learning","pattern recognition","neural network","computational learning theory","artificial intelligence","data science","feature extraction"],
     "homepage": "https://www.tinywan.com/",
     "authors": [
         {
