@@ -9,7 +9,7 @@
  * |  Desc: 描述信息
  * '------------------------------------------------------------------------------------------------------------------*/
 
-namespace Library;
+namespace Library\Common\Db;
 
 use Config\RedisConfig;
 

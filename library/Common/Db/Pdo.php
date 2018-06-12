@@ -9,13 +9,15 @@
  * |  Desc: PDO 链接数据库
  * '------------------------------------------------------------------------------------------------------------------*/
 
-namespace Library;
+namespace Library\Common\Db;
+
+use Config\DbConfig;
 
 class Pdo
 {
     protected $_dsn = "mysql:host=localhost;dbname=tinywan";
     protected $_name = "root";
-    protected $_pass = "root";
+    protected $_pass = "";
     protected $_condition = array();
     protected $pdo;
     protected $fetchAll;
@@ -36,9 +38,12 @@ class Pdo
     /**
      * Pdo constructor.
      */
-    public function __construct($pconnect = false)
+    public function __construct($env = 'location')
     {
-        $this->_condition = $pconnect;
+        $config = DbConfig::$location;
+        $this->_dsn = "mysql:host={$config['hostname']};dbname={$config['database']}";
+        $this->_name = $config['username'];
+        $this->_pass = $config['password'];
         $this->_pdoConnect();
     }
 
@@ -49,7 +54,7 @@ class Pdo
     private function _pdoConnect()
     {
         try {
-            $this->pdo = new \PDO($this->_dsn, $this->_name, $this->_pass, $this->_condition);
+            $this->pdo = new \PDO($this->_dsn, $this->_name, $this->_pass, [\PDO::ATTR_PERSISTENT]);
         } catch (\Exception $e) {
             return $this->setExceptionError($e->getMessage(), $e->getline, $e->getFile);
         }

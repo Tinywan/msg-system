@@ -10,7 +10,8 @@
  * '------------------------------------------------------------------------------------------------------------------*/
 
 use \GatewayWorker\Lib\Gateway;
-use \Library\MsgRedis;
+use \Library\Common\Db\MsgRedis;
+use \Library\Common\Db\Pdo;
 
 /**
  * 字典说明
@@ -29,11 +30,19 @@ class Events
     const MSG_TYPE = ['join', 'say', 'like', 'pong'];
 
     /**
+     * Pdo 实例
+     * @var
+     */
+    private static $_pdo;
+
+    /**
      * Worker进程开启时触发
      */
     public static function onWorkerStart()
     {
         echo "Start WorkerStart\n";
+        // test MySQL
+        //static::$_pdo = new Pdo();
     }
 
     /**
@@ -61,6 +70,10 @@ class Events
     {
         // 服务端console输出 
         //echo "msg : $message \r\n";
+
+        // 链接MySQL数据库
+        //$sql = "INSERT INTO tinywan_admin (username,password,status) VALUES ('onConnect','121111','1')";
+        //static::$_pdo->exec($sql);
 
         // 解析数据
         $resData = json_decode($message, true);
