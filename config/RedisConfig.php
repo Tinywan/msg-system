@@ -21,6 +21,8 @@ class RedisConfig
         'port' => '6379',
         // 密码
         'password' => '',
+        // 默认数据库
+        'select' => 0,
         // 缓存前缀
         'prefix' => 'REDIS_LOCATION:',
         // 缓存有效期 0表示永久缓存
@@ -35,6 +37,8 @@ class RedisConfig
         'port' => '6379',
         // 密码
         'password' => '',
+        // 默认数据库
+        'select' => 0,
         // 缓存前缀
         'prefix' => 'REDIS_MESSAGE:',
         // 缓存有效期 0表示永久缓存

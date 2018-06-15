@@ -47,7 +47,7 @@ class BaseRedis
     public static function instance()
     {
         try {
-            if (!class_exists('redis', false)) {
+            if (!extension_loaded('redis')) {
                 throw new \Exception("必须安装redis扩展，请检查扩展是否安装");
             }
             if (!(static::$_instance instanceof \Redis)) {
@@ -86,13 +86,17 @@ class BaseRedis
         try {
             $_connectSource = self::instance()
                 ->connect(RedisConfig::$message['host'], RedisConfig::$message['port']);
-            if (RedisConfig::$message['password'] != '') {
+            if ('' != RedisConfig::$message['password']) {
                 self::instance()->auth(RedisConfig::$message['password']);
             }
-            if ($_connectSource === FALSE) return FALSE;
+
+            if (0 != RedisConfig::$message['select']) {
+                self::instance()->select(RedisConfig::$message['select']);
+            }
+            if ($_connectSource === false) return false;
             return static::$_instance;
         } catch (\Exception $e) {
-            return false;
+            throw new \Exception($e->getMessage(), 100006);
         }
     }
 
@@ -106,10 +110,17 @@ class BaseRedis
         try {
             $_connectSource = self::instance()
                 ->connect(RedisConfig::$location['host'],RedisConfig::$location['port']);
-            if ($_connectSource === FALSE) return FALSE;
+            if ('' != RedisConfig::$location['password']) {
+                self::instance()->auth(RedisConfig::$location['password']);
+            }
+
+            if (0 != RedisConfig::$location['select']) {
+                self::instance()->select(RedisConfig::$location['select']);
+            }
+            if ($_connectSource === false) return false;
             return static::$_instance;
         } catch (\Exception $e) {
-            return false;
+            throw new \Exception($e->getMessage(), 100006);
         }
     }
 
