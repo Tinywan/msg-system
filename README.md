@@ -63,6 +63,10 @@ start_for_win.bat
 | userId |  用户id   |
 | userName |  用户昵称   |
 
+## Demo Show 
+
+![demo-01](/library/Images/show.gif) 
+
 ## Problem 
 
 * 提示错误`start_businessworker.php terminated and try to restart`
