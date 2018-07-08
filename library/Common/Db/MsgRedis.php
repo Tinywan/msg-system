@@ -24,17 +24,44 @@ class MsgRedis
     }
 
     /**.----------------------------------------------------------------------------------------------------------------
+     * |--------------------权限管理
+     * '----------------------------------------------------------------------------------------------------------------
+     */
+
+    /**
+     * 发行票据
+     */
+    public static function issueTicket($client_id, $expires = 3600)
+    {
+        $key = "ISSUE_TICKET:" . $client_id;
+        $ticket = md5($key . $expires);
+        BaseRedis::location()->setex($key, $expires, $ticket);
+        return $ticket;
+    }
+
+    // 检查票据是否过期
+    public static function checkTicket($client_id, $message)
+    {
+        $ticketKey = "ISSUE_TICKET:" . $client_id;
+        $ticket = BaseRedis::location()->get($ticketKey);
+        if (!isset($message['token']) || $ticket != $message['token']) {
+            return false;
+        }
+        return true;
+    }
+
+    /**.----------------------------------------------------------------------------------------------------------------
      * |--------------------消息统计
      * '----------------------------------------------------------------------------------------------------------------
-    /**
+     * /**
      * 直播间PV统计
      * @param $roomId
      */
     public static function Pv($roomId)
     {
-        $key = "PV:ROOM:".$roomId;
+        $key = "PV:ROOM:" . $roomId;
         $field = "ROOM_TOTAL_PV";
-        self::instance()->hIncrBy($key,$field,1);
+        self::instance()->hIncrBy($key, $field, 1);
     }
 
     /**
@@ -44,7 +71,7 @@ class MsgRedis
      */
     public static function getPv($roomId)
     {
-        $key = "PV:ROOM:".$roomId;
+        $key = "PV:ROOM:" . $roomId;
         $field = "ROOM_TOTAL_PV";
         return intval(self::instance()->hGet($key, $field));
     }
@@ -55,9 +82,9 @@ class MsgRedis
      */
     public static function Uv($roomId)
     {
-        $key = "UV:ROOM:".$roomId;
+        $key = "UV:ROOM:" . $roomId;
         $field = "ROOM_TOTAL_UV";
-        self::instance()->hIncrBy($key,$field,1);
+        self::instance()->hIncrBy($key, $field, 1);
     }
 
     /**
@@ -67,7 +94,7 @@ class MsgRedis
      */
     public static function saveAllComments($roomId, $comment)
     {
-        $commentsKey = "COMMENTS:TOATAL:".$roomId;
+        $commentsKey = "COMMENTS:TOATAL:" . $roomId;
         //往右插，往数据库写入是从左往右顺序执行的
         self::instance()->rPush($commentsKey, json_encode($comment));
     }
@@ -79,7 +106,7 @@ class MsgRedis
      */
     public static function increaseTotalCommentsNum($roomId)
     {
-        $key = "COMMENTS:NUMS:".$roomId;
+        $key = "COMMENTS:NUMS:" . $roomId;
         $field = "COMMENTS_TOTAL_NUM";
         self::instance()->hIncrBy($key, $field, 1);
     }
@@ -91,7 +118,7 @@ class MsgRedis
      */
     public static function saveLatestComments($roomId, $comment)
     {
-        $latestCommentsKey = "COMMENTS:LATEST:".$roomId;
+        $latestCommentsKey = "COMMENTS:LATEST:" . $roomId;
         //往左插，取出时从左面开始取
         self::instance()->lPush($latestCommentsKey, json_encode($comment));
         self::instance()->lTrim($latestCommentsKey, 0, 9);
@@ -105,7 +132,7 @@ class MsgRedis
      */
     public static function getLatestComments($roomId, $num)
     {
-        $latestCommentsKey = "COMMENTS:LATEST:".$roomId;
+        $latestCommentsKey = "COMMENTS:LATEST:" . $roomId;
         return self::instance()->lRange($latestCommentsKey, 0, $num - 1);
     }
 
@@ -116,7 +143,7 @@ class MsgRedis
      */
     public static function increaseTotalLikeNum($roomId)
     {
-        $key = "COMMENTS:LIKE:".$roomId;
+        $key = "COMMENTS:LIKE:" . $roomId;
         $field = "COMMENTS_LIKE_TOTAL";
         return self::instance()->hIncrBy($key, $field, 1);
     }
@@ -128,7 +155,7 @@ class MsgRedis
      */
     public static function getCommentsLikeNum($roomId)
     {
-        $key = "COMMENTS:LIKE:".$roomId;
+        $key = "COMMENTS:LIKE:" . $roomId;
         $field = "COMMENTS_LIKE_TOTAL";
         return intval(self::instance()->hGet($key, $field));
     }
@@ -177,7 +204,7 @@ class MsgRedis
      */
     public static function getBlackList($roomId)
     {
-        $key = "LIST:BLACK:".$roomId;
+        $key = "LIST:BLACK:" . $roomId;
         $field = "BLACK_LIST";
         if (self::instance()->hExists($key, $field)) {
             return json_decode(self::instance()->hGet($key, $field), true);
@@ -193,7 +220,7 @@ class MsgRedis
      */
     public static function getWhiteList($roomId)
     {
-        $key = "LIST:WHITE:".$roomId;
+        $key = "LIST:WHITE:" . $roomId;
         $field = "WHITE_LIST";
         if (self::instance()->hExists($key, $field)) {
             return json_decode(self::instance()->hGet($key, $field), true);
