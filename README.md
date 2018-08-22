@@ -1,77 +1,79 @@
-# Install
+#### 安装
 
 ```php
 git clone https://github.com/Tinywan/msg-system.git
 ```
 
-# update 
+#### 解决依赖 
 
 ```php
 composer install
 ```
 
-# config
+#### 编辑配置文件
 
-#### Redis  
+###### Redis（默认）  
 
 ```php
 config/RedisConfig.php
 ```
 
-#### MySQL 
+###### MySQL 
 
 ```php
 config/DbConfig.php
 ```
 
-# run  
+#### 开始服务  
 
-#### Linux
+###### Linux
 
 ```php
 php start.php start
 ```
+> 守护进程 `php start.php start -d`
 
-#### Windows 
+###### Windows 
 
 ```php
 start_for_win.bat
 ```
+>直接运行批处理文件即可，如何做成一个服务请自行谷歌 
 
-# Data Dictionary  
+#### 数据字典  
 
-#### connect type   
+###### 消息事件   
 
-|  field   |  desc   |
-| :---: | :---: |
+|  字段   |  描述   |
+| :--- | :--- |
 | init  |  初始化  |
 | json  | 加入直播间 |
 |  say  | 发表评论  |
 | like  |  点赞   |
 | close |  退出   |
 
-#### msg field   
+###### 消息内容描述   
 
-|  fields   |  desc   |
-| :---: | :---: |
+|  字段   |  描述   |
+| :--- | :--- |
 | client_id  |  客户端连接唯一id  |
 | msg  | 消息 |
-|  joinTime  | 加入直播间时间  |
+| joinTime  | 加入直播间时间  |
 | commentTime  |  评论时间|
 | content |  评论内容   |
 | roomId |  直播间id   |
 | userId |  用户id   |
 | userName |  用户昵称   |
 
-## 客户端页面
+#### 客户端页面
 
 [代码](https://github.com/Tinywan/msg-system/issues/1)
 
-## Demo Show 
+#### Demo  
 
 ![demo-01](/library/Images/show.gif) 
 
-## Problem 
+#### 问题  
 
 * 提示错误`start_businessworker.php terminated and try to restart`
   * 请查看Redis是否配置合适
