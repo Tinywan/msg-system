@@ -110,7 +110,7 @@ class Events
 
         $roomId = $resData['roomId'];
         $userId = $resData['userId']; // 未登录，则传递一个随机
-        $userName = $resData['userName'] . rand(1111, 9999); // 未登录，则传递一个随机
+        $userName = $resData['userName'] . $userId; // 未登录，则传递一个随机
         $content = isset($resData['content']) ? $resData['content'] : 'default content';
 
         //将时间全部置为服务器时间
@@ -135,23 +135,25 @@ class Events
 
                 //得到评论的数据
                 $latestComments = MsgRedis::getLatestComments($roomId, 5);
-                //向当前用户自己广播数据 广播给直播间内所有人，谁？什么时候？加入了那个房间？
+                // 广播给当前直播间直播间内所有人，谁？什么时候？加入了那个房间？
                 $resData = array(
                   'type' => 'join',
                   'userName' => $userName,
-                  'message' => '用户加入直播间',
+                  'userId' => $userId,
+                  'message' => '欢迎来到本直播间',
                   'totalViewNum' => 12,
                   'totalLikeNum' => 22,
                   'joinTime' => $serverTime,
                   'commentList' => array_reverse($latestComments), //倒序一下，把最新的放到最后（也就是页面的最下面）
                   'currentNum' => Gateway::getClientCountByGroup($roomId)
                 );
-                Gateway::sendToGroup($roomId, json_encode($resData));
+                Gateway::sendToGroup($roomId,json_encode($resData));
                 break;
             case 'say':  // 用户发表评论
                 $resData = [
                   'type' => 'say',
                   'roomId' => $roomId,
+                  'userId' => $userId,
                   'userName' => $userName,
                   'content' => $content,
                   'commentTime' => $serverTime // 发表评论时间
@@ -169,6 +171,8 @@ class Events
                 MsgRedis::increaseTotalLikeNum($roomId);
                 $arr = array(
                   'type' => 'num',
+                  'roomId' => $roomId,
+                  'userId' => $userId,
                   'userName' => $userName,
                   'message' => '用户点赞成功',
                   'totalViewNum' => MsgRedis::getPv($roomId),

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "workerman/gateway-worker",
-            "version": "v3.0.9",
+            "version": "v3.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/GatewayWorker.git",
-                "reference": "0d91d66dd5cdcc05a3c6ab17dc7c15087728baed"
+                "reference": "c206ec41e21f092055d1ddd3ee296895fc004cb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/walkor/GatewayWorker/0d91d66dd5cdcc05a3c6ab17dc7c15087728baed.zip",
-                "reference": "0d91d66dd5cdcc05a3c6ab17dc7c15087728baed",
+                "url": "https://api.github.com/repos/walkor/GatewayWorker/zipball/c206ec41e21f092055d1ddd3ee296895fc004cb5",
+                "reference": "c206ec41e21f092055d1ddd3ee296895fc004cb5",
                 "shasum": ""
             },
             "require": {
@@ -38,20 +38,20 @@
                 "communication",
                 "distributed"
             ],
-            "time": "2018-05-22T16:57:48+00:00"
+            "time": "2018-08-21T06:17:30+00:00"
         },
         {
             "name": "workerman/workerman",
-            "version": "v3.5.11",
+            "version": "v3.5.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/Workerman.git",
-                "reference": "c83e189b5855d91f99a7d01ac58f5bbc7161b5e5"
+                "reference": "6d70996b2b4ec94000e807246aca0e861c9601d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/walkor/Workerman/c83e189b5855d91f99a7d01ac58f5bbc7161b5e5.zip",
-                "reference": "c83e189b5855d91f99a7d01ac58f5bbc7161b5e5",
+                "url": "https://api.github.com/repos/walkor/Workerman/zipball/6d70996b2b4ec94000e807246aca0e861c9601d8",
+                "reference": "6d70996b2b4ec94000e807246aca0e861c9601d8",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
                 "asynchronous",
                 "event-loop"
             ],
-            "time": "2018-06-07T09:36:14+00:00"
+            "time": "2018-08-04T12:41:54+00:00"
         }
     ],
     "packages-dev": [],
