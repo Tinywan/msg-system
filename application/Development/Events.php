@@ -1,4 +1,5 @@
 <?php
+
 /**.-------------------------------------------------------------------------------------------------------------------
  * |  Github: https://github.com/Tinywan
  * |  Blog: http://www.cnblogs.com/Tinywan
@@ -70,10 +71,10 @@ class Events
 //        }
         $ticket = static::getIssueTicket($client_id);
         $resData = [
-          'type' => 'init',
-          'client_id' => $client_id,
-          'token' => $ticket,
-          'msg' => 'connect is success' // 初始化房间信息
+            'type' => 'init',
+            'client_id' => $client_id,
+            'token' => $ticket,
+            'msg' => 'connect is success' // 初始化房间信息
         ];
         Gateway::sendToClient($client_id, json_encode($resData));
     }
@@ -137,26 +138,26 @@ class Events
                 $latestComments = MsgRedis::getLatestComments($roomId, 5);
                 // 广播给当前直播间直播间内所有人，谁？什么时候？加入了那个房间？
                 $resData = array(
-                  'type' => 'join',
-                  'userName' => $userName,
-                  'userId' => $userId,
-                  'message' => '欢迎来到本直播间',
-                  'totalViewNum' => 12,
-                  'totalLikeNum' => 22,
-                  'joinTime' => $serverTime,
-                  'commentList' => array_reverse($latestComments), //倒序一下，把最新的放到最后（也就是页面的最下面）
-                  'currentNum' => Gateway::getClientCountByGroup($roomId)
+                    'type' => 'join',
+                    'userName' => $userName,
+                    'userId' => $userId,
+                    'message' => '欢迎来到本直播间',
+                    'totalViewNum' => 12,
+                    'totalLikeNum' => 22,
+                    'joinTime' => $serverTime,
+                    'commentList' => array_reverse($latestComments), //倒序一下，把最新的放到最后（也就是页面的最下面）
+                    'currentNum' => Gateway::getClientCountByGroup($roomId)
                 );
-                Gateway::sendToGroup($roomId,json_encode($resData));
+                Gateway::sendToGroup($roomId, json_encode($resData));
                 break;
             case 'say':  // 用户发表评论
                 $resData = [
-                  'type' => 'say',
-                  'roomId' => $roomId,
-                  'userId' => $userId,
-                  'userName' => $userName,
-                  'content' => $content,
-                  'commentTime' => $serverTime // 发表评论时间
+                    'type' => 'say',
+                    'roomId' => $roomId,
+                    'userId' => $userId,
+                    'userName' => $userName,
+                    'content' => $content,
+                    'commentTime' => $serverTime // 发表评论时间
                 ];
 
                 // 将所有评论存储到redis中
@@ -170,14 +171,14 @@ class Events
                 //点赞人数增长
                 MsgRedis::increaseTotalLikeNum($roomId);
                 $arr = array(
-                  'type' => 'num',
-                  'roomId' => $roomId,
-                  'userId' => $userId,
-                  'userName' => $userName,
-                  'message' => '用户点赞成功',
-                  'totalViewNum' => MsgRedis::getPv($roomId),
-                  'totalLikeNum' => MsgRedis::getCommentsLikeNum($roomId) + MsgRedis::getTotalLikeNumByCheat($roomId),
-                  'currentNum' => Gateway::getClientCountByGroup($roomId)
+                    'type' => 'num',
+                    'roomId' => $roomId,
+                    'userId' => $userId,
+                    'userName' => $userName,
+                    'message' => '用户点赞成功',
+                    'totalViewNum' => MsgRedis::getPv($roomId),
+                    'totalLikeNum' => MsgRedis::getCommentsLikeNum($roomId) + MsgRedis::getTotalLikeNumByCheat($roomId),
+                    'currentNum' => Gateway::getClientCountByGroup($roomId)
                 );
                 //给群组内的所有人广播
                 Gateway::sendToGroup($roomId, json_encode($arr));
@@ -185,8 +186,8 @@ class Events
             case 'pong':
                 if (empty($_SESSION['userId'])) {
                     $msg = [
-                      'type' => 'message',
-                      'text' => '认证超时'
+                        'type' => 'message',
+                        'text' => '认证超时'
                     ];
                     Gateway::sendToClient($client_id, json_encode($msg));
                     Gateway::closeClient($client_id);
@@ -205,13 +206,14 @@ class Events
     public static function onClose($client_id)
     {
         $resData = [
-          'type' => 'logout',
-          'client_id' => $client_id,
-          'userName' => $_SESSION['userName'],
-          'outTime' => date('Y-m-d H:i:s', time()),
-          'msg' => $_SESSION['userName'] . ' is logout' // 初始化房间信息
+            'type' => 'logout',
+            'client_id' => $client_id,
+            'userName' => $_SESSION['userName'],
+            'outTime' => date('Y-m-d H:i:s', time()),
+            'msg' => $_SESSION['userName'] . ' 离开直播间' // 初始化房间信息
         ];
         if (isset($_SESSION['roomId'])) {
+            $resData['currentNum'] = Gateway::getClientCountByGroup($_SESSION['roomId']);
             Gateway::sendToGroup($_SESSION['roomId'], json_encode($resData));
         } else {
             GateWay::sendToAll("$client_id is logout\r\n");
